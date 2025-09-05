@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sorpresa</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to bottom, #fff9c4, #ffe082);
+      font-family: 'Georgia', serif;
+      text-align: center;
+      color: #5a4100;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      max-width: 600px;
+      line-height: 1.5;
+      background: rgba(255, 255, 200, 0.8);
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      animation: aparecer 3s ease-in-out, latido 2s infinite;
+    }
+
+    @keyframes aparecer {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes latido {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    .foto {
+      margin-top: 25px;
+      width: 260px;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      animation: aparecer 3s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌻 Sé que me dijiste que no hiciera esto,  
+  pero de todas maneras quería que tú también tuvieras tus flores amarillas.  
+  💛 Baja las escaleras 💛</h1>
+
+  <img src="21s3.jpg" alt="Flores amarillas" class="foto">
+</body>
+</html>
+
+

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sorpresa Especial</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(to bottom, #fff7d6, #ffe98a), 
+                  url("diseno-plano-marco-girasol_23-2149263445 (1).jpg") no-repeat center center;
+      background-size: cover;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      color: #5a4100;
+    }
+
+    h1 {
+      background-color: rgba(255, 223, 120, 0.7);
+      padding: 15px 25px;
+      border-radius: 15px;
+      font-size: 2.5rem;
+      z-index: 2;
+    }
+
+    .imagenes {
+      margin: 20px;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+      z-index: 2;
+    }
+
+    .imagenes img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      border: 3px solid #f6d860;
+      transition: transform 0.3s ease;
+    }
+
+    .imagenes img:hover {
+      transform: scale(1.1);
+    }
+
+    .boton {
+      margin-top: 30px;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      color: #fff;
+      background-color: #f4c542;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: transform 0.2s, background 0.3s;
+      z-index: 2;
+    }
+
+    .boton:hover {
+      background-color: #e2b139;
+      transform: scale(1.1);
+    }
+
+    .girasoles {
+      margin-top: 40px;
+      width: 200px;
+      height: 200px;
+      z-index: 2;
+    }
+
+    svg path {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      animation: dibujar 5s forwards;
+    }
+
+    @keyframes dibujar {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    .emoji {
+      position: absolute;
+      font-size: 2.5rem;
+      animation: flotar 10s infinite ease-in-out;
+      opacity: 0.9;
+    }
+
+    .emoji:nth-child(1) { top: 10%; left: 5%; animation-delay: 0s; }
+    .emoji:nth-child(2) { top: 70%; left: 15%; animation-delay: 2s; }
+    .emoji:nth-child(3) { top: 20%; right: 10%; animation-delay: 4s; }
+    .emoji:nth-child(4) { bottom: 15%; right: 20%; animation-delay: 6s; }
+
+    @keyframes flotar {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(10deg); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Emojis flotando -->
+  <div class="emoji">🌻💞</div>
+  <div class="emoji">🌻💞</div>
+  <div class="emoji">🌻💞</div>
+  <div class="emoji">🌻💞</div>
+
+  <h1>Para alguien muy especial 💛</h1>
+
+  <div class="imagenes">
+    <img src="21s1.jpg" alt="Foto 1">
+    <img src="21s2.jpg" alt="Foto 2">
+  </div>
+
+  <button class="boton" onclick="location.href='sorpresa.html'">
+    🌻 Presione esta vara 💞
+  </button>
+
+  <div class="girasoles">
+    <svg viewBox="0 0 100 100" fill="none" stroke="#FFD700" stroke-width="2">
+      <path d="M50 10 L58 30 L80 30 L62 45 L70 70 L50 55 L30 70 L38 45 L20 30 L42 30 Z"/>
+    </svg>
+  </div>
+</body>
+</html>
